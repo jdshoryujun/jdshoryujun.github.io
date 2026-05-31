@@ -443,8 +443,8 @@ img { display: block; max-width: 100%; }
 }
 
 .member-avatar {
-  width: 76.8px;
-  height: 76.8px;
+  width: 115.2px;
+  height: 115.2px;
   border-radius: 50%;
   display: flex;
   align-items: flex-start;
@@ -455,12 +455,13 @@ img { display: block; max-width: 100%; }
   margin: 0 auto 10px;
   border: 2px solid transparent;
   overflow: hidden;
-  padding-top: calc((76.8px - 88.2px) / 2);
+  padding-top: 0;
 }
 .member-avatar img {
-  width: 115%;
+  width: 150%;
   height: auto;
-  object-fit: contain;
+  object-fit: cover;
+  object-position: center top;
 }
 .av-cyan  { background: var(--accent-light-cyan); color: #2A8080; border-color: var(--accent-cyan); }
 .av-pink  { background: var(--accent-light-pink); color: #993366; border-color: var(--accent-pink); }

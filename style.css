@@ -443,17 +443,24 @@ img { display: block; max-width: 100%; }
 }
 
 .member-avatar {
-  width: 64px;
-  height: 64px;
+  width: 76.8px;
+  height: 76.8px;
   border-radius: 50%;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   font-family: var(--font-serif);
   font-size: 15px;
   font-weight: 500;
-  margin: 0 auto 14px;
+  margin: 0 auto 10px;
   border: 2px solid transparent;
+  overflow: hidden;
+  padding-top: calc((76.8px - 88.2px) / 2);
+}
+.member-avatar img {
+  width: 115%;
+  height: auto;
+  object-fit: contain;
 }
 .av-cyan  { background: var(--accent-light-cyan); color: #2A8080; border-color: var(--accent-cyan); }
 .av-pink  { background: var(--accent-light-pink); color: #993366; border-color: var(--accent-pink); }
@@ -466,7 +473,7 @@ img { display: block; max-width: 100%; }
   font-weight: 500;
   color: var(--text-primary);
   letter-spacing: 0.05em;
-  margin-bottom: 4px;
+  margin-bottom: 2px;
 }
 .member-role {
   font-size: 13px;

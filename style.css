@@ -192,10 +192,17 @@ img { display: block; max-width: 100%; }
   z-index: 1;
   margin-bottom: 28px;
   animation: floatY 4s ease-in-out infinite;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .hero-logo-wrap svg {
-  width: 100px;
-  height: 100px;
+  width: 100%;
+  height: 100%;
+  max-width: 100px;
+  max-height: 100px;
   border-radius: 18px;
   filter: drop-shadow(0 8px 24px rgba(187,255,255,0.3));
 }
@@ -424,18 +431,21 @@ img { display: block; max-width: 100%; }
 /* ── メンバー ── */
 .members-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
 }
 
 .member-card {
   background: var(--bg-card);
   border: 1px solid var(--border-card);
   border-radius: var(--radius-md);
-  padding: 32px 20px;
+  padding: 24px 20px;
   text-align: center;
   box-shadow: var(--shadow-sm);
   transition: transform 0.25s, box-shadow 0.25s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .member-card:hover {
   transform: translateY(-4px);
@@ -455,15 +465,16 @@ img { display: block; max-width: 100%; }
   margin: 0 auto 14px;
   border: 2px solid transparent;
   overflow: hidden;
-  position: relative;
   flex-shrink: 0;
 }
+
 .member-avatar img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center top;
 }
+
 .av-cyan  { background: var(--accent-light-cyan); color: #2A8080; border-color: var(--accent-cyan); }
 .av-pink  { background: var(--accent-light-pink); color: #993366; border-color: var(--accent-pink); }
 .av-warm  { background: #FFF0E0; color: #A06020; border-color: var(--accent-warm); }
@@ -726,6 +737,15 @@ img { display: block; max-width: 100%; }
 
   .section { padding: 56px 24px; }
   .hero { padding: 60px 24px; }
+  
+  .hero-logo-wrap {
+    width: 100px;
+    height: 100px;
+  }
+  .hero-logo-wrap svg {
+    max-width: 80px;
+    max-height: 80px;
+  }
 
   .contact-wrap { grid-template-columns: 1fr; }
   .gallery-grid { grid-template-columns: repeat(2, 1fr); }

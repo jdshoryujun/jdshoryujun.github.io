@@ -456,6 +456,7 @@ img { display: block; max-width: 100%; }
   border: 2px solid transparent;
   overflow: hidden;
   position: relative;
+  flex-shrink: 0;
 }
 .member-avatar img {
   width: 100%;

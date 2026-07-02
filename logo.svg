@@ -4,7 +4,7 @@
 <svg version="1.1" id="レイヤー_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
 	 y="0px" width="595.281px" height="841.891px" viewBox="0 0 595.281 841.891" enable-background="new 0 0 595.281 841.891"
 	 xml:space="preserve">
-<rect y="123.305" fill="#08007A" width="595.281" height="595.28"/>
+<rect y="123.305" fill="#08007A" width="595.281" height="595.28" rx="85"/>
 <path fill="#BBFFFF" stroke="#FFFFFF" stroke-width="0.7087" stroke-miterlimit="10" d="M479.361,192.563
 	c-5.906-5.099-13.277-11.766-19.951-15.86c-1.652-1.003-1.186-1.975-2.053,0c-1.133,2.593-0.016,12.909,1.025,18.926
 	c10.709,62.123,52.168,99.183,47.055,172.882c-1.674,24.15-7.932,45.303-16.363,64.449c-16.008,36.33-41.443,65.866-72.635,87.979

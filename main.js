@@ -8,7 +8,8 @@ const navLinks  = document.querySelector('.nav-links');
 
 if (navToggle && navLinks) {
   navToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('open');
+    const isOpen = navLinks.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', isOpen);
   });
   // ナビリンクをクリックしたら閉じる
   navLinks.querySelectorAll('a').forEach(a => {

@@ -679,6 +679,20 @@ img { display: block; max-width: 100%; }
   box-shadow: 0 6px 24px rgba(77,207,207,0.4);
 }
 
+/* 送信ボタン：無効状態 */
+.form-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* 送信ボタン：送信済み状態 */
+.form-submit.sent {
+  background: var(--accent-cyan);
+  pointer-events: none;
+}
+
 /* ── フッター ── */
 .footer {
   background: var(--bg-footer);

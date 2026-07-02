@@ -38,20 +38,30 @@ fadeEls.forEach(el => observer.observe(el));
 // ── お問い合わせフォーム ──
 const form = document.getElementById('contact-form');
 if (form) {
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const btn = form.querySelector('.form-submit');
-    btn.textContent = '送信しました！';
-    btn.style.background = '#4DCFCF';
-    btn.disabled = true;
+  const btn = form.querySelector('.form-submit');
+  const inputs = [
+    document.getElementById('contact-name'),
+    document.getElementById('contact-email'),
+    document.getElementById('contact-message')
+  ];
 
-    // 3秒後にリセット
-    setTimeout(() => {
-      form.reset();
-      btn.textContent = '送信する';
-      btn.style.background = '';
-      btn.disabled = false;
-    }, 3000);
+  // 初期状態：ボタンを無効化
+  btn.disabled = true;
+
+  // 3つ全部入力されているかチェック
+  function checkInputs() {
+    const allFilled = inputs.every(input => input.value.trim() !== '');
+    btn.disabled = !allFilled;
+  }
+
+  // 各入力欄の変化を監視
+  inputs.forEach(input => input.addEventListener('input', checkInputs));
+
+ // 送信処理
+  form.addEventListener('submit', () => {
+    btn.textContent = '送信しました！';
+    btn.classList.add('sent');
+    btn.disabled = true;
   });
 }
 
